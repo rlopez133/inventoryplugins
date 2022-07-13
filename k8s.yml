@@ -1,0 +1,6 @@
+# This config example is for the kubernetes.core.k8s
+# DOCS: https://docs.ansible.com/ansible/latest/collections/kubernetes/core/k8s_inventory.html#ansible-collections-kubernetes-core-k8s-inventory
+plugin: kubernetes.core.k8s
+connections:
+- namespace:
+  - dokuwiki
