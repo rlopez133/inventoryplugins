@@ -1,0 +1,10 @@
+---
+#playbook.yaml
+
+- name: DISPLAY THE INVENTORY VARS
+  hosts: namespace_dokuwiki_pods # These are dynamically generated groups from the plugin
+  gather_facts: no
+  tasks:
+    - name: DISPLAY THE HOST VARS
+      ansible.builtin.debug:
+        msg: "The hostname is {{ inventory_hostname }} and its IP is {{ pod_ip }}"
